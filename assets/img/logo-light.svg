@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" role="img" aria-label="WhizAxis">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6B5CF6"/><stop offset="1" stop-color="#12B5A5"/></linearGradient></defs>
+  <rect x="2" y="4" width="40" height="40" rx="11" fill="url(#g)"/>
+  <path d="M11 15 L17 33 L22 21 L27 33 L33 15" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="33" cy="15" r="2.6" fill="#fff"/>
+  <text x="52" y="33" font-family="Plus Jakarta Sans, Segoe UI, Arial, sans-serif" font-size="25" font-weight="800" fill="#FFFFFF">Whiz<tspan fill="#12B5A5">Axis</tspan></text>
+</svg>
