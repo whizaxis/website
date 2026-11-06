@@ -184,6 +184,7 @@ h3 { font-size: 20px; }
 
 /* ---------- Expertise ---------- */
 .expertise-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.expertise-list.four { grid-template-columns: repeat(4, 1fr); }
 .exp-item { border-top: 2px solid rgba(255,255,255,.15); padding-top: 26px; }
 .exp-item .n { font-size: 15px; font-weight: 800; color: var(--teal); margin-bottom: 10px; }
 .exp-item h3 { font-size: 22px; margin-bottom: 8px; }
@@ -395,7 +396,7 @@ h3 { font-size: 20px; }
   .menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .hero .container, .ai-band, .contact-grid, .svc-detail, .about-split, .ind-wrap { grid-template-columns: 1fr; }
   .svc-detail.rev .svc-visual { order: 0; }
-  .cards.c3, .expertise-list { grid-template-columns: 1fr 1fr; }
+  .cards.c3, .expertise-list, .expertise-list.four { grid-template-columns: 1fr 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .stat:nth-child(2) { border-right: 0; }
   .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
@@ -407,7 +408,7 @@ h3 { font-size: 20px; }
 @media (max-width: 640px) {
   .section { padding: 64px 0; }
   .container { padding: 0 16px; }
-  .cards.c3, .cards.c2, .cards.c4, .expertise-list, .modules, .process, .form-row, .footer-grid { grid-template-columns: 1fr; }
+  .cards.c3, .cards.c2, .cards.c4, .expertise-list, .expertise-list.four, .modules, .process, .form-row, .footer-grid { grid-template-columns: 1fr; }
   .modules { grid-template-columns: 1fr 1fr; }
   .hero { padding: 80px 0 110px; }
   .form { padding: 24px; }
@@ -429,10 +430,6 @@ h3 { font-size: 20px; }
 }
 .hero::before, .hero::after { z-index: 1; }
 .hero .grid-lines { z-index: 1; }
-@media (max-width: 768px) {
-  .hero-video video { display: none; }
-  .hero-video { background: url('../img/hero-poster.jpg') center/cover no-repeat; }
-}
 @media (prefers-reduced-motion: reduce) {
   .hero-video video { display: none; }
   .hero-video { background: url('../img/hero-poster.jpg') center/cover no-repeat; }
