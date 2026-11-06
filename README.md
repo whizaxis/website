@@ -31,6 +31,9 @@ To receive messages directly (recommended):
 2. Open `assets/js/main.js` and paste your form ID into `FORMSPREE_ID = ""`.
 3. Change `TO_EMAIL` to your email.
 
+## Hero background video
+The home page hero uses a looping animated background (`assets/video/hero.mp4` + `hero.webm`, poster `assets/img/hero-poster.jpg`). To replace it, overwrite those files keeping the same names — on mobile and for reduced-motion users the poster image is shown automatically.
+
 ## Brand colours
 Edit the top of `assets/css/style.css` (`:root`) to change colours. Logo files are in `assets/img/`.
 

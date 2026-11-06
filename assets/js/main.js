@@ -105,6 +105,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+
+  // Hero video fallback: if the file fails to load, use the poster image
+  var hv = document.querySelector(".hero-video video");
+  if (hv) {
+    var usePoster = function () {
+      hv.style.display = "none";
+      hv.parentElement.style.background = "url('assets/img/hero-poster.jpg') center/cover no-repeat";
+    };
+    hv.addEventListener("error", usePoster);
+    hv.querySelectorAll("source").forEach(function (s) {
+      s.addEventListener("error", function () { if (hv.readyState === 0) usePoster(); });
+    });
+  }
+
   // Year in footer
   var y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
