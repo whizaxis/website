@@ -14,11 +14,8 @@ A ready-to-upload website for WhizAxis — *Intelligence Behind Better Business.
 | privacy.html / terms.html | Legal pages (template text) |
 
 ## Before you publish — please update
-1. **Contact details** — search all `.html` files for these and replace:
-   - `info@whizaxis.com`, `sales@whizaxis.com`, `careers@whizaxis.com`
-   - `+92 300 0000000` and `+923000000000`
-   - `923000000000` (WhatsApp button link)
-   - `Your office address, City, Pakistan`
+1. **Contact details** — the site now shows only `info@whizaxis.com` (top bar, footer, contact sections and contact form).
+   Phone, WhatsApp button, careers email and office address were removed. Add them back only when you have real ones.
 2. **Numbers on the home page** (50+ projects, 10+ industries, 40+ clients, 10+ countries) — these are sample figures. Change them to your real numbers in `index.html` (both the `data-count` value and the text).
 3. **Testimonials** — the 3 review cards on the home page are placeholders. Replace with real client reviews, then delete the yellow note.
 4. **Social links** — in the footer, replace `href="#"` with your LinkedIn, Facebook, Instagram, YouTube and X links.
@@ -32,6 +29,20 @@ To receive messages directly (recommended):
 1. Create a free form at https://formspree.io
 2. Open `assets/js/main.js` and paste your form ID into `FORMSPREE_ID = ""`.
 3. Change `TO_EMAIL` to your email.
+
+## Home hero animations (assets/js/hero.js)
+- **Headline:** "Complexity" scrambles once, then the last line types and rotates. Change the phrases in `index.html` → `data-words="Operational Excellence.|Connected Operations.|Smarter Decisions.|Measurable Growth."` (separate with `|`). Keep only one phrase to stop rotation.
+- **Orbit graphic:** scattered tools (complexity) → one connected system (transformation) → AI moving work between CRM, Sales, MRP, Inventory, Accounting and HR (automation). The top pill highlights the matching stage. Edit the department text with `data-status` / `data-event` on each `.onode` in `index.html`.
+- Animations pause when scrolled off-screen, and show a still picture for visitors who turn off motion on their device.
+
+## App icons (assets/img/apps)
+The Odoo app icons on the home page (hero circle + "Every Department, Connected") are separate files:
+`sales, crm, accounting, inventory, purchase, manufacturing, hr, pos, ecommerce, projects` (.svg).
+To use different icons, replace a file with one of the same name. If you use a .png, change the file name in `index.html` too.
+Only use Odoo's official icons if you have the right to (check Odoo's brand / partner rules).
+
+## Hero size
+On laptops and desktops the home banner is exactly one screen tall at 100% zoom (the circle shrinks or grows with screen height).
 
 ## Hero background video
 The home page hero uses a looping animated background (`assets/video/hero.mp4` + `hero.webm`, poster `assets/img/hero-poster.jpg`). To replace it, overwrite those files keeping the same names — the video plays on desktop and mobile; visitors who turn off motion in their device settings see the poster image instead.
